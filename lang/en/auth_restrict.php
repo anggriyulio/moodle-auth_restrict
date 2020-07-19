@@ -1,8 +1,18 @@
 <?php
+/**
+ * Strings for component 'auth_restrict', language 'en'.
+ *
+ * @package   auth_none
+ * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
-$string['auth_restrictdescription'] = 'The LTI authentication plugin, together with the \'Publish as LTI tool\' enrolment plugin, allows remote users to access selected courses and activities. In other words, Moodle functions as an LTI tool provider.';
+
+$string['auth_restrictdescription'] = 'Moodle Plugin for Restricting User Authentication.';
 $string['pluginname'] = 'Authentication Restriction';
-$string['auth_restrictfilename'] = 'Authentication Restriction File';
-$string['auth_restrictfiledescription'] = 'A csv file. Download CSV template here (<a href="http://docs.moodle.org/en/NTLM_authentication">http://docs.moodle.org/en/NTLM_authentication</a>)';
-
+$string['privacy:metadata'] = 'The Authentication Restriction plugin does not store any personal data.';
+$string['auth_restrictfilename'] = 'Restriction File';
+$string['auth_restrictfiledescription'] = 'A CSV file. Download CSV template here (<a href="https://github.com/anggriyulio/restrict">https://github.com/anggriyulio/restrict</a>)';
+$string['auth_restrictmessage'] = 'Message';
+$string['auth_restrictmessagedescription'] = 'Message when user login is restricted';
 $string['notconfig'] = 'Authentication Restriction Plugin in not configured';

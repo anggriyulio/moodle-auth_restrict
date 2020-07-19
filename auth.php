@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * auth_restrict plugin
+ *
+ * @package    auth_restrict
+ * @copyright  2020 Anggri Y Pernadna (https://github.com/anggriyulio)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -8,8 +15,6 @@ require_once($CFG->libdir . '/authlib.php');
 
 class auth_plugin_restrict extends auth_plugin_base
 {
-
-    var $msg = "<center><h3>Tidak dapat login ke eLearning.</h3><hr>";
 
     function __construct()
     {
@@ -49,12 +54,9 @@ class auth_plugin_restrict extends auth_plugin_base
      */
     function user_authenticated_hook(&$user, $username, $password)
     {
-        global $CFG, $OUTPUT, $SESSION;
 
         if ($this->canLogin($user->username) == NULL) {
             $message = get_config('auth_restrict', 'message');
-
-
             redirect('/login/index.php', $message, NULL, \core\output\notification::NOTIFY_ERROR);
             return FALSE;
         }
@@ -86,7 +88,6 @@ class auth_plugin_restrict extends auth_plugin_base
         } catch (Exception $e) {
             return NULL;
         }
-
 
     }
 
@@ -146,9 +147,6 @@ class auth_plugin_restrict extends auth_plugin_base
             echo $OUTPUT->notification(get_string('notconfig', 'auth_restrict'), 'notifyproblem');
 
         }
-
-
     }
-
-
+    
 }
