@@ -2,7 +2,7 @@
 Moodle Plugin for Restricting User Authentication
 
 ## Manual Install:
-- Download latest version of this plugin [https://github.com/anggriyulio/telegramNotify/releases](https://github.com/anggriyulio/moodle-auth_restrict/releases)
+- Download latest version of this plugin [https://github.com/anggriyulio/moodle-auth_restrict/releases](https://github.com/anggriyulio/moodle-auth_restrict/releases)
 - Extract to <moodle_path>/auth/***restrict***
 - Login to moodle as administrator and run database upgrade
 - Enable plugin  (`Dashboard > Site administration > Plugins > Authentication > Manage authentication`)
