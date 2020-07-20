@@ -76,6 +76,12 @@ class auth_plugin_restrict extends auth_plugin_base
         $currentTime = time();
         try {
 
+            // Check if username exists
+            $exists = $DB->record_exists('auth_restrict',  ['username'=>$username]);
+            if (!$exists) {
+                return TRUE;
+            }
+
             $query = 'SELECT* FROM ' . $CFG->prefix . 'auth_restrict
                     WHERE username="' . $this->ext_addslashes($username) . '"  AND start_time <= ' . $currentTime . ' AND end_time >= ' . $currentTime . '';
 
